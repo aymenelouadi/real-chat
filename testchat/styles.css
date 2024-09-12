@@ -1,0 +1,121 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container for the entire app */
+.app-container {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Room setup styles */
+.room-setup {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.room-setup h1 {
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.room-setup input, .room-setup button {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: calc(100% - 22px); /* Adjusting for padding */
+}
+
+.room-setup input:focus, .room-setup button:hover {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Chat container styles */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+.messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #e7f0ff;
+    border-radius: 5px;
+    max-width: 80%;
+    word-break: break-word;
+}
+
+.chat-form {
+    display: flex;
+    border-top: 1px solid #ddd;
+    background: #fff;
+    padding: 10px;
+}
+
+.chat-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.chat-form button {
+    padding: 10px;
+    margin-left: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-form button:hover {
+    background: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .app-container {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .chat-form {
+        flex-direction: column;
+    }
+
+    .chat-form button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}

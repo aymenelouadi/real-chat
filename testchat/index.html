@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق دردشة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="room-setup">
+            <h1>تطبيق الدردشة</h1>
+            <button id="create-room">إنشاء غرفة</button>
+            <input id="room-code" type="text" placeholder="أدخل رمز الغرفة" />
+            <input id="username" type="text" placeholder="أدخل اسمك" />
+            <button id="join-room">انضم إلى الغرفة</button>
+            <p id="status"></p>
+        </div>
+        <div class="chat-container" style="display: none;">
+            <div id="messages" class="messages"></div>
+            <form id="chat-form" class="chat-form">
+                <input id="message" type="text" placeholder="أدخل رسالتك" autocomplete="off">
+                <button type="submit">إرسال</button>
+            </form>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
